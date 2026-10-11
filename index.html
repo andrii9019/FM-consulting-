@@ -102,10 +102,11 @@ section.block{padding-block:72px;border-top:1px solid var(--line)}
 .svc-ico{width:48px;height:48px;border-radius:14px;background:var(--surface-2);display:grid;place-items:center;color:var(--brand)}
 .svc h3{font-size:22px}
 .svc ul{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:10px}
-.svc li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:16px}
+.svc li{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:center;font-size:16px}
+.svc li+li{border-top:1px solid rgba(143,239,242,.1);padding-top:12px}
 .svc li b{display:block;font-weight:600}
 .svc li span{color:var(--muted)}
-.svc li::before{content:"";width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--amber)}
+.svc li::before{content:"";width:28px;height:28px;border-radius:8px;background:rgba(25,227,230,.12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2319E3E6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/15px no-repeat;border:1px solid rgba(25,227,230,.28)}
 .svc.feature{background:linear-gradient(150deg,#0B2F36,#061B20);border-color:#1A5560;color:var(--ink)}
 .svc.feature .svc-tag,.svc.feature li span{color:#A9C6CB}
 .svc.feature .svc-ico{background:rgba(255,255,255,.1);color:var(--amber)}
@@ -248,6 +249,12 @@ html,body{overflow-x:clip}
 .tagline{font-family:var(--body);font-weight:400;font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:#A9C6CB;letter-spacing:.01em;text-shadow:0 2px 14px rgba(3,10,13,.9)}
 .tagline span{color:var(--brand)}
 @media (max-width:900px){.hero h1.hero-title{font-size:clamp(28px,7.5vw,38px)}}
+
+/* checklist cards */
+.svc ul{gap:12px}
+.svc li b{font-weight:600}
+.solo .svc ul{row-gap:12px}
+.solo .svc li{border-top:1px solid rgba(143,239,242,.1);padding-top:12px}
 </style>
 <style>[hidden]{display:none!important}</style>
 </head>
@@ -311,27 +318,27 @@ html,body{overflow-x:clip}
         <div class="svc-top"><span class="svc-tag">01 · Структура</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/></svg></span></div>
         <h3>Структуризація клубу</h3>
         <ul>
-          <li><div><b>Посади і ролі</b><span>Штатний розпис під цілі клубу</span></div></li>
-          <li><div><b>Зони відповідальності</b><span>Хто за що відповідає і кому звітує</span></div></li>
-          <li><div><b>Оргструктура</b><span>Клуб, команда та академія в одній схемі</span></div></li>
+          <li><div><b>Посади і ролі</b></div></li>
+          <li><div><b>Зони відповідальності</b></div></li>
+          <li><div><b>Оргструктура</b></div></li>
         </ul>
       </article>
       <article class="svc feature">
         <div class="svc-top"><span class="svc-tag">02 · Ключова послуга</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><path d="M14 3v6h6M9 15l2 2 4-4"/></svg></span></div>
         <h3>Відповідність вимогам футбольних органів</h3>
         <ul>
-          <li><div><b>Клуб</b><span>Відповідність регламентам футбольних органів</span></div></li>
-          <li><div><b>Інфраструктура</b><span>Стадіон, поля, база — аудит і план дій</span></div></li>
-          <li><div><b>Кадри</b><span>Тренери та персонал з потрібною кваліфікацією</span></div></li>
-          <li><div><b>Документообіг</b><span>Підтримка в підготовці документів для атестації</span></div></li>
+          <li><div><b>Клуб</b></div></li>
+          <li><div><b>Інфраструктура</b></div></li>
+          <li><div><b>Кадри</b></div></li>
+          <li><div><b>Документообіг</b></div></li>
         </ul>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="svc-tag">03 · Скаутинг</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 13l2-3 2 2 2-3"/></svg></span></div>
         <h3>Скаутинг</h3>
         <ul>
-          <li><div><b>Пошук гравців</b><span>Шорт-листи під модель гри та бюджет</span></div></li>
-          <li><div><b>Звіти</b><span>Чіткі висновки для тренерів і керівництва</span></div></li>
+          <li><div><b>Пошук гравців</b></div></li>
+          <li><div><b>Звіти</b></div></li>
         </ul>
       </article>
     </div>
@@ -352,12 +359,12 @@ html,body{overflow-x:clip}
         <div class="svc-top"><span class="svc-tag">Від показу до контракту</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1Z"/><path d="M17 9a4 4 0 0 1 0 6M20 6a8 8 0 0 1 0 12"/></svg></span></div>
         <h3>Повний супровід переходу в новий клуб</h3>
         <ul>
-          <li><div><b>Пропозиція клубам</b><span>Пропонуємо гравця клубам, яким він підходить</span></div></li>
-          <li><div><b>Показ тренерам</b><span>Презентуємо гравця тренерам і скаутам</span></div></li>
-          <li><div><b>Переговори</b><span>Допомагаємо вести переговори з клубом</span></div></li>
-          <li><div><b>Підписання контракту</b><span>Підтримка на етапі підписання</span></div></li>
-          <li><div><b>Юридичні консультації</b><span>Розбираємо умови і правові питання</span></div></li>
-          <li><div><b>Новий крок у кар'єрі</b><span>Перехід на вищий рівень</span></div></li>
+          <li><div><b>Пошук клубу</b></div></li>
+          <li><div><b>Стажування</b></div></li>
+          <li><div><b>Переговори</b></div></li>
+          <li><div><b>Підписання контракту</b></div></li>
+          <li><div><b>Юридичні консультації</b></div></li>
+          <li><div><b>Новий крок у кар'єрі</b></div></li>
         </ul>
       </article>
     </div>
@@ -378,27 +385,27 @@ html,body{overflow-x:clip}
         <div class="svc-top"><span class="svc-tag">01 · Консультації</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></span></div>
         <h3>Консультації для батьків</h3>
         <ul>
-          <li><div><b>Оцінка рівня дитини</b><span>Чесний погляд на потенціал</span></div></li>
-          <li><div><b>План розвитку</b><span>Що робити зараз і через рік</span></div></li>
-          <li><div><b>Відповіді на питання</b><span>Режим, навантаження, мотивація</span></div></li>
+          <li><div><b>Оцінка рівня дитини</b></div></li>
+          <li><div><b>План розвитку</b></div></li>
+          <li><div><b>Відповіді на питання</b></div></li>
         </ul>
       </article>
       <article class="svc feature">
         <div class="svc-top"><span class="svc-tag">02 · Академії</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3Z"/><path d="M9 20v-6h6v6"/></svg></span></div>
         <h3>Вибір академії</h3>
         <ul>
-          <li><div><b>Порівняння академій</b><span>Тренери, умови, випускники</span></div></li>
-          <li><div><b>Підбір під дитину</b><span>Вік, рівень, розташування</span></div></li>
-          <li><div><b>Умови вступу</b><span>Що потрібно для зарахування</span></div></li>
+          <li><div><b>Порівняння академій</b></div></li>
+          <li><div><b>Підбір під дитину</b></div></li>
+          <li><div><b>Умови вступу</b></div></li>
         </ul>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="svc-tag">03 · Перегляди</span><span class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
         <h3>Перегляди</h3>
         <ul>
-          <li><div><b>Пошук переглядів</b><span>В академіях і клубах</span></div></li>
-          <li><div><b>Підготовка</b><span>Що чекає дитину на перегляді</span></div></li>
-          <li><div><b>Супровід</b><span>Організація та зворотний зв'язок</span></div></li>
+          <li><div><b>Пошук переглядів</b></div></li>
+          <li><div><b>Підготовка</b></div></li>
+          <li><div><b>Супровід</b></div></li>
         </ul>
       </article>
     </div>
